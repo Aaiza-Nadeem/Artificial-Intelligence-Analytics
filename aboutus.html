@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <script src="{% static 'main.js' %}"></script>
+
+    <title>Dashboard</title>
+    <style>
+        body {
+            color: rgb(49, 106, 161);
+            text-align: center;
+            padding-top: 2%;
+        }
+    .logout {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    .home {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+    </style>
+</head>
+<body>
+    <body style="background-image: url('{%static 'images/about_us.png'%}');"></body>
+    <h1><b>About Us</h1>
+    <p>Welcome to MusicWorld, where we leverage the power of AI to <br>
+    analyze and determine the popularity of songs based on specific characteristics.</p>
+
+    <h3>AI Algorithms</h3>
+    <p>Our backend employs advanced machine learning algorithms that<br> 
+        analyze various features of songs, including but not limited to:</p>
+        <p>
+            Artist Name<br>
+            Tempo<br>
+            Instrumentalness<br>
+            Energy<br>
+            Danceability<br>
+            Acousticness<br>
+            Valence<br>
+            Speechiness<br>
+            Duration_ms<br>
+            Loudness<br>
+            Liveness<br>
+        These algorithms consider patterns and trends in music data to provide<br> 
+            insights into a song's popularity in the future!</p>
+            <h3>How It Works</h3>
+            <p>When you search for a song or explore our platform, our <br>
+                AI algorithms analyze the characteristics of the music to generate <br>
+                recommendations and insights about the song's popularity within the <br>
+                MusicWorld community according to data we have about regarding songs.</p>
+                <p>Feel free to explore and discover new music with confidence in our<br>
+                     AI-driven recommendations!</b></p>
+    <a class="logout" href="{% url 'first' %}">
+        <img src="{% static 'images/logout.png' %}" alt="Logout" width="50" height="50">
+    </a>
+    <a class="home" href="{% url 'dashboard' %}">
+        <img src="{% static 'images/home.png' %}" alt="Home" width="50" height="50">
+    </a>
+</body>
+</html>

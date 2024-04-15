@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <script src="{% static 'main.js' %}"></script>
+    <title>Dashboard</title>
+    <style>
+        body {
+            color: rgb(253, 250, 71);
+            text-align: center;
+            padding-top: 17%;
+        }
+        .logout {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .home {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        .aboutus {
+            position: absolute;
+            top: 100px;
+            left: 10px;
+        }
+        .fs{
+            position: absolute;
+            top: 300px;
+            left:10px;
+        }
+        .vr{
+            position: absolute;
+            top: 200px;
+            left:10px;
+        }
+        .cm{
+            position: absolute;
+            top: 400px;
+            left:10px;
+        }
+        .predict_song{
+            position: absolute;
+            top: 500px;
+            left:10px;
+        }
+    </style>
+</head>
+<body>
+    <body style="background-image: url('{%static 'images/dashboarddb.jpeg'%}');"></body>
+    <h1><b>WHERE WORDS FAIL, MUSIC SPEAKS!</b></h1>
+    <a class="logout" href="{% url 'first' %}">
+        <img src="{% static 'images/logout.png' %}" alt="Logout" width="50" height="50">
+    </a>
+    <a class="home" href="{% url 'dashboard' %}">
+        <img src="{% static 'images/home.png' %}" alt="Home"width="50" height="50">
+    </a>
+    <a class="aboutus" href="{% url 'aboutus' %}">
+        <img src="{% static 'images/aboutus.jpeg' %}" alt="About Us" width="50" height="50">
+    </a>
+    <a class="vr" href="{% url 'vr' %}">
+        <img src="{% static 'images/vr1.png' %}" alt="View Records" width="50" height="50">
+    </a>
+    <a class="fs" href="{% url 'fs' %}">
+        <img src="{% static 'images/fs.jpeg' %}" alt="Feature Selection"  width="50" height="50">>
+    </a>
+    <a class="cm" href="{% url 'cm' %}">
+        <img src="{% static 'images/cm.jpeg' %}" alt="Confusion Matrix"  width="50" height="50">
+    </a>
+    <a class="predict_song" href="{% url 'predict_song' %}">
+        <img src="{% static 'images/pl.jpeg' %}" alt="Predicate Logic"  width="50" height="50">
+    </a>
+</body>
+</html>

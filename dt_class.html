@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <script src="{% static 'main.js' %}"></script>
+    <title>Decision Tree Classifier</title>
+</head>
+    <style>
+        body {
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding-top: 2%;
+        }
+        .logout {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .home {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+    </style>
+<body>
+    <body style="background-image: url('{%static 'images/dtc1.jpeg'%}');"></body>
+    <h2><b>Decision Tree Classifier</h2>
+    <p>Accuracy (from Confusion Matrix - Testing Data): {{ accuracy_percentage }}</b></p>
+    <img src="data:image/png;base64,{{ image_base64 }}" alt="Decision Tree Classifier">
+    <a class="logout" href="{% url 'first' %}">
+        <img src="{% static 'images/logout.png' %}" alt="Logout" width="50" height="50">
+    </a>
+    <a class="home" href="{% url 'dashboard' %}">
+        <img src="{% static 'images/home.png' %}" alt="Home" width="50" height="50">
+    </a>
+</body>
+</html>

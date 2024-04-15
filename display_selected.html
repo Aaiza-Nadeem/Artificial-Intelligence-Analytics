@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Records</title>
+    <style>
+    body {
+            color: rgb(255, 255, 255);
+            text-align: center;
+            background-color: rgb(132, 42, 165);
+            padding-top: 2%;
+        }
+        .home {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Music Records</h2>
+    <table border="1">
+        <tr>
+            <th>Artist Name</th>
+            <th>Acousticness</th>
+            <th>Danceability</th>
+            <th>Duration_ms</th>
+            <th>Energy</th>
+            <th>Instrumentalness</th>
+            <th>Loudness</th>
+            <th>Liveness</th>
+            <th>Speechiness</th>
+            <th>Tempo</th>>
+            <th>Valence</th>
+            <th>Popularity</th>
+            <th>Popular</th>
+        </tr>
+        
+        {% for record in records %}
+        <tr>
+            <td>{{ record.artist_name }}</td>
+            <td>{{ record.acousticness }}</td>
+            <td>{{ record.danceability }}</td>
+            <td>{{ record.duration_ms }}</td>
+            <td>{{ record.energy }}</td>
+            <td>{{ record.instrumentalness }}</td>
+            <td>{{ record.loudness }}</td>
+            <td>{{ record.liveness }}</td>
+            <td>{{ record.speechiness }}</td>
+            <td>{{ record.tempo }}</td>
+            <td>{{ record.valence }}</td>
+            <td>{{ record.popularity }}</td>
+            <td>{{ record.popular }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a class="home" href="{% url 'dashboard' %}">
+        <img src="{% static 'images/home.png' %}" alt="Home" width="50" height="50">
+    </a>
+</body>
+</html>

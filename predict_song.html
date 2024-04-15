@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <script src="{% static 'main.js' %}"></script>
+    <title>Predict Song Popularity</title>
+    <style>
+        body {
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding-top: 2%;
+        }
+        .logout {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .home {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <body style="background-image: url('{%static 'images/result.png'%}');"></body>
+    <h2>Predict Song Popularity</h2>
+    <form method="post" action="{% url 'predict_song' %}">
+        {% csrf_token %}
+        <label for="track_name">Track Name:</label>
+        <input type="text" name="track_name" required><br><br>
+        <label for="acousticness">Acousticness:</label>
+        <input type="text" name="acousticness" required><br><br>
+
+        <label for="danceability">Danceability:</label>
+        <input type="text" name="danceability" required><br><br>
+
+        <label for="tempo">Tempo:</label>
+        <input type="text" name="tempo" required><br><br>
+
+        <label for="energy">Energy:</label>
+        <input type="text" name="energy" required><br><br>
+
+        <label for="instrumentalness">Instrumentalness:</label>
+        <input type="text" name="instrumentalness" required><br><br>
+
+        <label for="valence">Valence:</label>
+        <input type="text" name="valence" required><br><br>
+        <label for="speechiness">Speechiness:</label>
+        <input type="text" name="speechiness" required><br><br>
+        <label for="loudness">Loudness:</label>
+        <input type="text" name="loudness" required><br><br>
+
+        <label for="liveness">Liveness:</label>
+        <input type="text" name="liveness" required><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+    <a class="logout" href="{% url 'first' %}">
+        <img src="{% static 'images/logout.png' %}" alt="Logout" width="50" height="50">
+    </a>
+    <a class="home" href="{% url 'dashboard' %}">
+        <img src="{% static 'images/home.png' %}" alt="Home" width="50" height="50">
+    </a>
+</body>
+</html>

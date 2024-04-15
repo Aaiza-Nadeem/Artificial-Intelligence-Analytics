@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' media='screen' href='{% static 'css/style.css' %}'>
+    <script src='main.js'></script>
+    <title>Login</title>
+    <style>
+        body {
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding-top: 20%;
+        }
+        .back {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+    </style>
+</head>
+<body style="background-image: url('{%static 'images/loginmw.jpeg'%}');">
+    <h1>WELCOME TO MUSIC WORLD!</h1>
+    <form action="{% url 'login' %}" method="post">
+        {% csrf_token %}
+        <label for="username">Username:</label>
+        <input type="text" name="username" required><br><br>
+        <label for="password">Password:</label>
+        <input type="password" name="password" required><br><br>
+        <input type="submit" value="Login">
+    </form>
+    <a class="back" href="{% url 'first' %}">
+        <img src="{% static 'images/back.png' %}" alt="Back" width="50" height="50">
+    </a>
+</body>
+</html>

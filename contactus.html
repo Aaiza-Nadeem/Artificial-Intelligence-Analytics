@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <script src="{% static 'main.js' %}"></script>
+
+    <title>Contact Us</title>
+    <style>
+        body {
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding-top: 2%;
+        }
+    .back {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+    </style>
+</head>
+<body>
+    <body style="background-image: url('{%static 'images/contactus.jpeg'%}');"></body>
+    <h1><b>Contact Us</h1>
+        <p>To make an account you have to correspond with the following<br>
+            Email: musicworld@gmail.com <br>
+            Phone # 0331-5652529 <br>
+            WhatsApp # 0331-5652520 <br>
+        </p>
+   <h2>MusicWorld</h2>
+    <p>Our backend employs advanced machine learning algorithms that<br> 
+        analyze various features of songs, including but not limited to:<br>
+            Artist Name<br>
+            Tempo<br>
+            Instrumentalness<br>
+            Energy<br>
+            Danceability<br>
+            Acousticness<br>
+            Valence<br>
+            Speechiness<br>
+            Duration_ms<br>
+            Loudness<br>
+            Liveness<br>
+            When you search for a song or explore our platform, our <br>
+                AI algorithms analyze the characteristics of the music to generate <br>
+                recommendations and insights about the song's future popularity<br></b></p>
+    <a class="back" href="{% url 'first' %}">
+        <img src="{% static 'images/back.png' %}" alt="Back" width="50" height="50">
+    </a>
+</body>
+</html>

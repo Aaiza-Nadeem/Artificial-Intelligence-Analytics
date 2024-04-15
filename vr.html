@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <script src="{% static 'main.js' %}"></script>
+    <title>VIEW RECORDS</title>
+    <style>
+        body {
+            color: rgb(92, 7, 105);
+            text-align: center;
+            padding-top: 5%;
+        }
+        .logout {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .home {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        .View_Original{
+            position: absolute;
+            top: 150px;
+            left:600px;
+        }
+        .View_Popular{
+            position: absolute;
+            top: 250px;
+            left:600px;
+        }
+        .View_Not_Popular{
+            position: absolute;
+            top: 350px;
+            left:600px;
+        }
+        .View_Selected{
+            position: absolute;
+            top: 450px;
+            left:600px;
+        }
+    </style>
+</head>
+<body>
+    <body style="background-image: url('{%static 'images/vr.png'%}');"></body>
+    <h1><b>VIEW RECORDS</b></h1>
+    <a class="logout" href="{% url 'first' %}">
+        <img src="{% static 'images/logout.png' %}" alt="Logout" width="50" height="50">
+    </a>
+    <a class="home" href="{% url 'dashboard' %}">
+        <img src="{% static 'images/home.png' %}" alt="Home" width="50" height="50">
+    </a>
+    <a class="View_Original" href="{% url 'display_records' %}">
+        <img src="{% static 'images/org.png' %}" alt="View_Original" width="50" height="50">
+    </a>
+    <a class="View_Popular" href="{% url 'popular' %}">
+        <img src="{% static 'images/pop.png' %}" alt="View_Popular" width="50" height="50">
+    </a>
+    <a class="View_Not_Popular" href="{% url 'not_popular' %}">
+        <img src="{% static 'images/not_pop.png' %}" alt="View_Not_Popular" width="50" height="50">
+    </a>
+    <a class="View_Selected" href="{% url 'display_selected' %}">
+        <img src="{% static 'images/fs.png' %}" alt="View_Selected" width="50" height="50">
+    </a>
+</body>
+</html>

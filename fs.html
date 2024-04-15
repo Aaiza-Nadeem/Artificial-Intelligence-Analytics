@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <script src="{% static 'main.js' %}"></script>
+    <title>Feature Selection</title>
+    <style>
+        body {
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding-top: 10%;
+        }
+        .logout {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .home {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        .dt_selection{
+            position: absolute;
+            top: 250px;
+            left:600px;
+        }
+    </style>
+</head>
+<body>
+    <body style="background-image: url('{%static 'images/fss.png'%}');"></body>
+    <h1><b>Feature Selection</b></h1>
+    <a class="logout" href="{% url 'first' %}">
+        <img src="{% static 'images/logout.png' %}" alt="Logout" width="50" height="50">
+    </a>
+    <a class="home" href="{% url 'dashboard' %}">
+        <img src="{% static 'images/home.png' %}" alt="Home" width="50" height="50">
+    </a>
+    <a class="dt_selection" href="{% url 'dt_selection' %}">
+        <img src="{% static 'images/dts.jpeg' %}" alt="Decision Tree Feature Selection" width="50" height="50">
+    </a>
+</body>
+</html>
